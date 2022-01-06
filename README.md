@@ -59,5 +59,6 @@ steps:
   ```
 ## Information
 
-- Azure DevOps: https://docs.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops
+- Your Azure Devops organizations: https://dev.azure.com/
+- Azure DevOps Docs: https://docs.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops
 - Create .NET Pipeline: https://docs.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=net%2Ctfs-2018-2%2Cbrowser
