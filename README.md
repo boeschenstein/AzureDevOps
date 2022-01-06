@@ -22,12 +22,18 @@ Test app (`ng serve`) and push it to the repo.
 
 Go to your new project and create a new pipeline under 'Pipelines'
 
-- change node version to 14.x or 16.x
+- I have to choose "Azure Repos Git"
+- select your Repo
+- 'Configure your pipeline': select 'Node.js with Angular'
+
+Edit Pipeline:
+
+- change node versionSpec to 14.x or 16.x
 - add this as first line in 'script':
 
 `cd '$(System.DefaultWorkingDirectory)/HelloWorld'`
 
-Run pipeline and make sure it is green. Congrats!
+'Save and Run' pipeline and make sure it is green. Congrats!
 
 ## Information
 
