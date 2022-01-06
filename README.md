@@ -35,6 +35,28 @@ Edit Pipeline:
 
 'Save and Run' pipeline and make sure it is green. Congrats!
 
+Pipeline so far:
+
+```yaml
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '16.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    cd '$(System.DefaultWorkingDirectory)/HelloWorld'
+    npm install -g @angular/cli
+    npm install
+    ng build --prod
+  displayName: 'npm install and build'
+  ```
 ## Information
 
 - Azure DevOps: https://docs.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops
