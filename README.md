@@ -74,6 +74,30 @@ What is Azure DevOps <https://learn.microsoft.com/en-us/azure/devops/learn/what-
 
 - Pipelines: <https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops>
 
+Fork this Demo app into your GitHub account: <https://github.com/MicrosoftDocs/pipelines-dotnet-core>
+
+In my case, I had to select 'ASP.NET Core' template manually. This creates the following pipeline:
+
+```yaml
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'dotnet build $(buildConfiguration)'
+```
+
 ## Information
 
 - Your Azure Devops organizations (when logged in): https://dev.azure.com/
