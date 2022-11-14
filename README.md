@@ -72,11 +72,9 @@ What is Azure DevOps <https://learn.microsoft.com/en-us/azure/devops/learn/what-
 
 ### Pipelines
 
-- Pipelines: <https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops>
+Generate a new Pipelines: <https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops>
 
-Fork this Demo app into your GitHub account: <https://github.com/MicrosoftDocs/pipelines-dotnet-core>
-
-In my case, I had to select 'ASP.NET Core' template manually. This creates the following pipeline:
+>In my case, I had to select 'ASP.NET Core' template manually. This creates the following pipeline:
 
 ```yaml
 # ASP.NET Core
@@ -97,6 +95,11 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 ```
+
+### Scripts
+
+- CMD: <https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops&tabs=yaml>
+- Bash: <https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/bash?view=azure-devops>
 
 ## Information
 
