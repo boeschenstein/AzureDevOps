@@ -58,36 +58,19 @@ steps:
   displayName: 'npm install and build'
 ```
 
-## CD (Continuous Delivery) Pipeline
+## Azure DevOps
 
-From 'Continuous delivery and continuous deployment': <https://youtu.be/bTGj4PeRPjs>
+What is Azure DevOps <https://learn.microsoft.com/en-us/azure/devops/learn/what-is-devops>
 
-1. Source Control Management
-1. CI - Continuous Integration
-    - Integration tests
-    - Unit tests
-1. System Integration Tests (SIT)
-1. Operational Acceptance Tests (OAT)
-1. Security Tests (Pen)
-1. Compliance Tests
-1. Deploy
-1. Delivery
+## Azure DevOps Example
 
-## Seven Software Testing Principles
+<https://learn.microsoft.com/en-us/training/modules/get-started-with-devops/>
 
-From: <https://www.guru99.com/software-testing-seven-principles.html>
+- Create Organization
 
-- Principle 1 Testing shows presence of defects
-- Principle 2 Exhaustive testing is impossible
-- Principle 3 Early Testing
-- Principle 4 Defect Clustering
-- Principle 5 Pesticide Paradox
-- Principle 6 Testing is context dependent
-- Principle 7 Absence of errors - fallacy
+## Testing, Unit Testing
 
-## Continuous Integration
-
-<https://youtu.be/RcTFpNlkiUs>
+<https://github.com/boeschenstein/testing/tree/main>
 
 ## Information
 
