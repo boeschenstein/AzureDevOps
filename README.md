@@ -67,13 +67,16 @@ What is Azure DevOps <https://learn.microsoft.com/en-us/azure/devops/learn/what-
 <https://learn.microsoft.com/en-us/training/modules/get-started-with-devops/>
 
 - Create Organization
+- Create Project
+- Create Board and Tasks
 
-## Testing, Unit Testing
+### Pipelines
 
-<https://github.com/boeschenstein/testing/tree/main>
+- Pipelines: <https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops>
 
 ## Information
 
 - Your Azure Devops organizations (when logged in): https://dev.azure.com/
 - Azure DevOps Docs: https://docs.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops
 - Create .NET Pipeline: https://docs.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=net%2Ctfs-2018-2%2Cbrowser
+- Testing, Unit Testing: <https://github.com/boeschenstein/testing/tree/main>
