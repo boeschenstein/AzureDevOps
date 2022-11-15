@@ -98,7 +98,7 @@ steps:
 
 Key Concepts: <https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/key-pipelines-concepts?view=azure-devops>
 
-### Create Pipeline with SourceCode in Azure DevOps Repo
+### Create Build Pipeline with SourceCode in Azure DevOps Repo
 
 Do it with source code in Azure DevOps, not Github:
 
@@ -108,13 +108,18 @@ Do it with source code in Azure DevOps, not Github:
 - Select a repository: Select your repo ('pipelines-dotnet-core' in my case)
 - Where is your code?: Select 'Azure Repos Git'
 - Configure your pipeline:
-  1. if available, select Select 'ASP.NET Core'
-  2. if no .NET option is available (if you have no test project or no solution file), choose it manually: 
-    - press 'Show More' 
+  1. if available, select suggested 'ASP.NET Core' pipeline
+  2. if no .NET option is available (might happen if you have no test project or no solution file), choose it manually: 
+    - Press 'Show More' 
     - Select 'ASP.NET Core' - inspect it :)
 - Press 'Save and Run', 'Save and Run'
 - Count to ten and voila - the new pipeline did run and is green :)
 - Notice: the new pipeline confg file 'azure-pipeline.yml' was added to the root project. you can edit there or in the Azure DevOps pipeline menu
+
+### Create Test Pipeline
+
+- Example: <https://learn.microsoft.com/en-us/training/modules/run-quality-tests-build-pipeline/4-add-unit-tests>
+- About: <https://learn.microsoft.com/en-us/azure/devops/pipelines/test/test-glossary?view=azure-devops>
 
 ### Pipeline Infos
 
