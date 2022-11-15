@@ -120,6 +120,26 @@ Do it with source code in Azure DevOps, not Github:
 
 - Example: <https://learn.microsoft.com/en-us/training/modules/run-quality-tests-build-pipeline/4-add-unit-tests>
 - About: <https://learn.microsoft.com/en-us/azure/devops/pipelines/test/test-glossary?view=azure-devops>
+- I had to fix the generated pipeline manually: add a custom filter in 'testAssemblyVer2' (my test assembly contains the name 'Tests'):
+
+```yaml
+# - task: VSTest@2
+#   inputs:
+#     platform: '$(buildPlatform)'
+#     configuration: '$(buildConfiguration)'
+#
+# HACK from https://github.com/microsoft/vstest/issues/3937#issuecomment-1219217090
+- task: VSTest@2
+  inputs:
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*Tests*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+```
 
 ### Pipeline Infos
 
