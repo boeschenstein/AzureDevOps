@@ -107,17 +107,29 @@ Do it with source code in Azure DevOps, not Github:
 - Pipelines: Create Pipeline
 - Select a repository: Select your repo ('pipelines-dotnet-core' in my case)
 - Where is your code?: Select 'Azure Repos Git'
-- Configure your pipeline: press 'Show More'
-- Select 'ASP.NET Core' - inspect it :)
+- Configure your pipeline:
+  1. if available, select Select 'ASP.NET Core'
+  2. if no .NET option is available (if you have no test project or no solution file), choose it manually: 
+    - press 'Show More' 
+    - Select 'ASP.NET Core' - inspect it :)
 - Press 'Save and Run', 'Save and Run'
 - Count to ten and voila - the new pipeline did run and is green :)
 - Notice: the new pipeline confg file 'azure-pipeline.yml' was added to the root project. you can edit there or in the Azure DevOps pipeline menu
 
-### YAML
+### Pipeline Infos
 
 - Stage/Job/Step hierarchy: <https://stackoverflow.com/questions/66705319/how-to-choose-between-step-job-and-stages-in-azure-devops-yaml>
 - CMD: <https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops&tabs=yaml>
 - Bash: <https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/bash?view=azure-devops>
+- Variable examples: https://learn.microsoft.com/en-us/training/modules/create-a-build-pipeline/7-publish-build-result
+- Zip release example: https://learn.microsoft.com/en-us/training/modules/create-a-build-pipeline/7-publish-build-result
+- Set up approvals: <https://learn.microsoft.com/en-us/training/modules/implement-code-workflow/8-require-reviewer>
+
+### YAML
+
+- Templates (code reuse, like functions): https://learn.microsoft.com/en-us/training/modules/create-a-build-pipeline/8-build-multiple-configurations
+- Schema reference: <https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/?tabs=schema&view=azure-pipelines>
+- YAML in Minutes: <https://learnxinyminutes.com/docs/yaml/>
 
 ## Information
 
