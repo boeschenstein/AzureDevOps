@@ -127,8 +127,10 @@ Do it with source code in Azure DevOps, not Github:
 #   inputs:
 #     platform: '$(buildPlatform)'
 #     configuration: '$(buildConfiguration)'
-#
-# HACK from https://github.com/microsoft/vstest/issues/3937#issuecomment-1219217090
+
+# Issue: testhost.deps.json or testhost.runtimeconfig.json or hostpolicy.dll missing
+# HACK from https://github.com/microsoft/vstest/issues/3937#issuecomment-1219217090 to solve this issue: change filter:
+
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
@@ -146,9 +148,9 @@ Do it with source code in Azure DevOps, not Github:
 - https://www.linkedin.com/pulse/net-core-open-source-unit-test-coverage-reports-federico-antu%C3%B1a?trk=public_profile_article_view
   - 'collect:"XPlat Code Coverage"' solves issue on my machine, because '/p:Coverlet...' fails on my machine: Argument not recognized
 
-```
-dotnet tool install --global dotnet-reportgenerator-globaltool
+```cmd
 dotnet test --collect:"XPlat Code Coverage" --results-directory:"./.coverage"
+dotnet tool install --global dotnet-reportgenerator-globaltool
 reportgenerator "-reports:.coverage/**/*.cobertura.xml" "-targetdir:.coverage-report/" "-reporttypes:HTML;"
 ```
 
