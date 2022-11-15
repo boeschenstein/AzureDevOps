@@ -145,6 +145,7 @@ Do it with source code in Azure DevOps, not Github:
 ### Code Coverage (coverlet)
 
 - <https://learn.microsoft.com/en-us/training/modules/run-quality-tests-build-pipeline/6-perform-code-coverage>
+- Documentation https://github.com/coverlet-coverage/coverlet
 - https://www.linkedin.com/pulse/net-core-open-source-unit-test-coverage-reports-federico-antu%C3%B1a?trk=public_profile_article_view
   - 'collect:"XPlat Code Coverage"' solves issue on my machine, because '/p:Coverlet...' fails on my machine: Argument not recognized
 
