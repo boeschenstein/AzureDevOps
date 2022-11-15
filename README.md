@@ -140,6 +140,17 @@ Do it with source code in Azure DevOps, not Github:
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
 ```
+### Code Coverage (coverlet)
+
+- <https://learn.microsoft.com/en-us/training/modules/run-quality-tests-build-pipeline/6-perform-code-coverage>
+- https://www.linkedin.com/pulse/net-core-open-source-unit-test-coverage-reports-federico-antu%C3%B1a?trk=public_profile_article_view
+  - 'collect:"XPlat Code Coverage"' solves issue on my machine, because '/p:Coverlet...' fails on my machine: Argument not recognized
+
+```
+dotnet tool install --global dotnet-reportgenerator-globaltool
+dotnet test --collect:"XPlat Code Coverage" --results-directory:"./.coverage"
+reportgenerator "-reports:.coverage/**/*.cobertura.xml" "-targetdir:.coverage-report/" "-reporttypes:HTML;"
+```
 
 ### Pipeline Infos
 
