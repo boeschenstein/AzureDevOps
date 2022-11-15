@@ -98,6 +98,21 @@ steps:
 
 Key Concepts: <https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/key-pipelines-concepts?view=azure-devops>
 
+### Create Pipeline with SourceCode in Azure DevOps Repo
+
+Do it with source code in Azure DevOps, not Github:
+
+- Put source code in Azure DevOps repo (I forked this project from GitHub to Azure Devos: https://github.com/MicrosoftDocs/pipelines-dotnet-core)
+- Open your Azure DevOps Organization + Project
+- Pipelines: Create Pipeline
+- Select a repository: Select your repo ('pipelines-dotnet-core' in my case)
+- Where is your code?: Select 'Azure Repos Git'
+- Configure your pipeline: press 'Show More'
+- Select 'ASP.NET Core' - inspect it :)
+- Press 'Save and Run', 'Save and Run'
+- Count to ten and voila - the new pipeline did run and is green :)
+- Notice: the new pipeline confg file 'azure-pipeline.yml' was added to the root project. you can edit there or in the Azure DevOps pipeline menu
+
 ### YAML
 
 - Stage/Job/Step hierarchy: <https://stackoverflow.com/questions/66705319/how-to-choose-between-step-job-and-stages-in-azure-devops-yaml>
@@ -110,3 +125,4 @@ Key Concepts: <https://learn.microsoft.com/en-us/azure/devops/pipelines/get-star
 - Azure DevOps Docs: https://docs.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops
 - Create .NET Pipeline: https://docs.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=net%2Ctfs-2018-2%2Cbrowser
 - Testing, Unit Testing: <https://github.com/boeschenstein/testing/tree/main>
+- Fork GitHub to Azure DevOps: https://stackoverflow.com/questions/40752333/fork-github-to-azuredevops
