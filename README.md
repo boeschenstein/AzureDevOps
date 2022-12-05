@@ -170,6 +170,47 @@ reportgenerator "-reports:.coverage/**/*.cobertura.xml" "-targetdir:.coverage-re
 - Schema reference: <https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/?tabs=schema&view=azure-pipelines>
 - YAML in Minutes: <https://learnxinyminutes.com/docs/yaml/>
 
+## Build Server
+
+### Build Agent
+
+- Open your DevOps 
+- Open 'Organization Settings'
+- Open Agent pools
+- Add a new Self-hosted pool
+- Download zip
+- Deploy Zip to your Build server
+- Run config.cmd to config Build Agent
+
+Details:
+
+- <https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/v2-windows?view=azure-devops>
+- video: <https://www.youtube.com/watch?v=sjCOc4g-AdY>
+
+### Install 'Build Tools for Visual Studio 2022'
+
+Hack for offline installer:
+
+```cmd
+REM Found a solution here:
+REM https://stackoverflow.com/questions/59868753/offline-build-tools-for-visual-studio-2019
+REM https://stackoverflow.com/questions/42696948/how-can-i-install-the-vs2017-version-of-msbuild-on-a-build-server-without-instal
+REM https://learn.microsoft.com/en-us/visualstudio/install/use-command-line-parameters-to-install-visual-studio?view=vs-2022
+
+REM Run the following stuff on with internet access (your local machine):
+REM Download vs_BuildTools.exe from https://my.visualstudio.com/downloads (todo: LTSC or not?)
+subst d: c:\temp
+vs_BuildTools.exe --add Microsoft.VisualStudio.Workload.AzureBuildTools --add Microsoft.VisualStudio.Workload.DataBuildTools --add Microsoft.VisualStudio.Workload.ManagedDesktopBuildTools --add Microsoft.VisualStudio.Workload.MSBuildTools --add Microsoft.VisualStudio.Workload.NodeBuildTools --add Microsoft.VisualStudio.Workload.OfficeBuildTools --add Microsoft.VisualStudio.Workload.UniversalBuildTools --add Microsoft.VisualStudio.Workload.VCTools --add Microsoft.VisualStudio.Workload.VisualStudioExtensionBuildTools --add Microsoft.VisualStudio.Workload.WebBuildTools --add Microsoft.VisualStudio.Workload.XamarinBuildTools  --wait --layout d:\downloads\offlineBuildTool --lang en-us --quiet
+
+REM Now copy the downloaded files to your build server
+REM Your laptop: d:\downloads\offlineBuildTool
+REM Your build server: d:\downloads\offlineBuildTool
+
+REM To install build tools on build server, run this:
+REM d:\downloads\offlineBuildTool\vs_BuildTools.exe
+REM In Gui, select [x] .NET Desktop Build Tools and [x] Web Development Build Tools
+```
+
 ## Information
 
 - Your Azure Devops organizations (when logged in): https://dev.azure.com/
