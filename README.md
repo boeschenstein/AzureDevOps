@@ -178,6 +178,7 @@ reportgenerator "-reports:.coverage/**/*.cobertura.xml" "-targetdir:.coverage-re
 - Open 'Organization Settings'
 - Open Agent pools
 - Add a new Self-hosted pool
+- Open new pool, select tab 'Agents': click 'New Agent'
 - Download zip
 - Deploy Zip to your Build server
 - Run config.cmd to config Build Agent
