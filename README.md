@@ -212,6 +212,11 @@ REM d:\downloads\offlineBuildTool\vs_BuildTools.exe
 REM In Gui, select [x] .NET Desktop Build Tools and [x] Web Development Build Tools
 ```
 
+## Branch
+
+- Run multiple pipelines: Main Branch: Build Validation
+- Branch Policy: restrict direct push to main branch: todo
+
 ## Learnings
 
 - cannot integrate complex pipeline change using a PR? try to push it manually to main
