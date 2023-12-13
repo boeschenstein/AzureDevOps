@@ -212,6 +212,10 @@ REM d:\downloads\offlineBuildTool\vs_BuildTools.exe
 REM In Gui, select [x] .NET Desktop Build Tools and [x] Web Development Build Tools
 ```
 
+## Learnings
+
+- cannot integrate complex pipeline change using a PR? try to push it manually to main
+
 ## Information
 
 - Your Azure Devops organizations (when logged in): https://dev.azure.com/
